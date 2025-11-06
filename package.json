@@ -68,6 +68,11 @@
     "@t8ngs/assert": "^1.0.0",
     "@t8ngs/runner": "^1.0.0 || ^4.0.0"
   },
+  "peerDependenciesMeta": {
+    "@t8ngs/runner": {
+      "comment": "Major versions 2 and 3 of @t8ngs/runner are not compatible due to breaking changes; this plugin only supports ^1.0.0 or ^4.0.0+."
+    }
+  },
   "homepage": "https://github.com/t8ngs/openapi#readme",
   "repository": {
     "type": "git",
