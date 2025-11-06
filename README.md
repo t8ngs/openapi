@@ -1,6 +1,6 @@
-# T8ngs OpenAPI (assertions para Japa)
+# T8ngs OpenAPI 
 
-Plugin de asserções OpenAPI para o ecossistema Japa, mantido pela T8ngs. Valide respostas HTTP dos seus testes contra um ou mais documentos OpenAPI.
+Plugin de asserções OpenAPI para o ecossistema T8ngs. Valide respostas HTTP dos seus testes contra um ou mais documentos OpenAPI.
 
 > Este projeto é baseado no trabalho original do pacote `@japa/openapi-assertions`.
 
@@ -11,15 +11,7 @@ Plugin de asserções OpenAPI para o ecossistema Japa, mantido pela T8ngs. Valid
 
 ## Instalação
 
-Use o pacote compatível atualmente disponível:
-
-```sh
-npm i -D @japa/openapi-assertions
-
-yarn add -D @japa/openapi-assertions
-```
-
-Ou instale diretamente deste repositório (opcional):
+Ou instale diretamente deste repositório:
 
 ```sh
 npm i -D github:t8ngs/openapi
@@ -30,8 +22,8 @@ yarn add -D github:t8ngs/openapi
 ## Uso
 
 ```ts
-import { configure } from '@japa/runner'
-import { openapi } from '@japa/openapi-assertions'
+import { configure } from '@t8ngs/runner'
+import { openapi } from '@t8ngs/openapi'
 
 configure({
 	plugins: [
