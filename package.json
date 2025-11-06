@@ -68,13 +68,13 @@
     "@t8ngs/assert": "^1.0.0",
     "@t8ngs/runner": "^1.0.0 || ^4.0.0"
   },
-  "homepage": "https://github.com/t8ngs/openapi-assert#readme",
+  "homepage": "https://github.com/t8ngs/openapi#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/t8ngs/openapi-assert.git"
+    "url": "git+https://github.com/t8ngs/openapi.git"
   },
   "bugs": {
-    "url": "https://github.com/t8ngs/openapi-assert/issues"
+    "url": "https://github.com/t8ngs/openapi/issues"
   },
   "keywords": [
     "open-api",
