@@ -1,0 +1,122 @@
+{
+  "name": "@japa/openapi-assert",
+  "description": "OpenAPI Assertions plugin for T8ngs",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=20.6.0"
+  },
+  "type": "module",
+  "files": [
+    "dist",
+    "!dist/bin",
+    "!dist/tests",
+    "!dist/tests_helpers"
+  ],
+  "main": "dist/index.js",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "scripts": {
+    "pretest": "npm run lint",
+    "test": "c8 npm run quick:test",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "typecheck": "tsc --noEmit",
+    "precompile": "npm run lint",
+    "compile": "tsup-node && tsc --emitDeclarationOnly --declaration",
+    "build": "npm run compile",
+    "version": "npm run build",
+    "prepublishOnly": "npm run build",
+    "release": "release-it",
+    "quick:test": "node --import=ts-node-maintained/register/esm --enable-source-maps bin/test.ts",
+    "prepare": "husky",
+    "commitlint": "commitlint --edit"
+  },
+  "devDependencies": {
+    "@arapucajs/eslint-config": "^1.1.2",
+    "@arapucajs/prettier": "^1.1.1",
+    "@arapucajs/tsconfig": "^1.0.0",
+    "@commitlint/cli": "^20.1.0",
+    "@commitlint/config-conventional": "^20.0.0",
+    "@swc/core": "^1.15.0",
+    "@t8ngs/assert": "^1.0.0",
+    "@t8ngs/expect": "^1.1.0",
+    "@t8ngs/fs": "^1.0.0",
+    "@t8ngs/runner": "^1.0.1",
+    "@types/chai": "^5.2.3",
+    "@types/dedent": "^0.7.2",
+    "@types/node": "^24.10.0",
+    "@types/stack-utils": "^2.0.3",
+    "assertion-error": "^2.0.1",
+    "c8": "^10.1.3",
+    "commitizen": "^4.3.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "del-cli": "^7.0.0",
+    "eslint": "^9.39.1",
+    "expect": "^30.2.0",
+    "husky": "^9.1.7",
+    "prettier": "^3.6.2",
+    "ts-node-maintained": "^10.9.6",
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "api-contract-validator": "^2.2.8",
+    "chai": "^6.2.0"
+  },
+  "peerDependencies": {
+    "@t8ngs/assert": "^1.0.0",
+    "@t8ngs/runner": "^1.0.0 || ^4.0.0"
+  },
+  "homepage": "https://github.com/t8ngs/openapi-assert#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/t8ngs/openapi-assert.git"
+  },
+  "bugs": {
+    "url": "https://github.com/t8ngs/openapi-assert/issues"
+  },
+  "keywords": [
+    "open-api",
+    "assert",
+    "t8ngs"
+  ],
+  "author": "JefteCosta <jefteamorim@gmail.com>",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "tsup": {
+    "entry": [
+      "index.ts"
+    ],
+    "outDir": "./dist",
+    "clean": true,
+    "format": "esm",
+    "dts": false,
+    "sourcemap": false,
+    "target": "esnext"
+  },
+  "c8": {
+    "reporter": [
+      "text",
+      "html"
+    ],
+    "exclude": [
+      "tests/**",
+      "tests_helpers/**"
+    ]
+  },
+  "prettier": "@arapucajs/prettier",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "exec < /dev/tty && npx cz --hook || true"
+    }
+  }
+}
