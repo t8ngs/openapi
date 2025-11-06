@@ -7,7 +7,7 @@ Plugin de asserções OpenAPI para o ecossistema T8ngs. Valide respostas HTTP do
 ## Requisitos
 
 - Node.js >= 20.6
-- `@japa/runner`
+- `@t8ngs/runner`
 
 ## Instalação
 

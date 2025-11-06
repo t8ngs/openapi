@@ -1,5 +1,5 @@
 {
-  "name": "@japa/openapi",
+  "name": "@t8ngs/openapi",
   "description": "OpenAPI Assertions plugin for T8ngs",
   "version": "1.0.0",
   "engines": {
