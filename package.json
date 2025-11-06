@@ -1,7 +1,7 @@
 {
   "name": "@t8ngs/openapi",
   "description": "OpenAPI Assertions plugin for T8ngs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "engines": {
     "node": ">=20.6.0"
   },
